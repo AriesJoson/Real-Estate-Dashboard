@@ -8,7 +8,7 @@ October 5, 2024
 Make sure that you have Node.js installed in your computer
 Download [Node.js] from (https://nodejs.org/.)
 
-Make sure that you open the [real-estate] folder in VScode
+After you clone the repo go to the Terminal and type `npm i` to install the dependencies
 
 After that you will go into the Terminal and check the directory if it's directed to real-estate folder
 If the directory is correct then you will type `npm start` to run the project

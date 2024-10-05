@@ -26,26 +26,30 @@ const handleClosePopup = () => {
 
 // Hadles all the filter from filter component and rendered it in the table
 const handleFilter = (filters) => {
-  // Passing the values to filters
-  const { searchQuery, status, minPrice, maxPrice } = filters;
+  const { status, minPrice, maxPrice, location } = filters;
   
-  // Ensure you handle cases where filters might be undefined
-  const query = searchQuery ? searchQuery.toLowerCase() : '';
-
-  // Processing the filter values if it's exist in mockData json
   const filtered = propertyData.properties.filter(property => {
-    const matchesQuery =
-      property.name.toLowerCase().includes(query) ||
-      property.location.city.toLowerCase().includes(query) ||
-      property.location.state.toLowerCase().includes(query) ||
-      property.status.toLowerCase().includes(query);
-
     const matchesStatus = status ? property.status === status : true;
     const matchesMinPrice = minPrice ? property.price >= minPrice : true;
     const matchesMaxPrice = maxPrice ? property.price <= maxPrice : true;
+    const matchesLocation = location ? property.location.state.toLowerCase() === location : true;
 
-    return matchesQuery && matchesStatus && matchesMinPrice && matchesMaxPrice;
+    return matchesStatus && matchesMinPrice && matchesMaxPrice && matchesLocation;
   });
+  setFilteredProperties(filtered);
+};
+
+// Hadles the search filter for the table
+const handleSearch = (searchQuery) => {
+  const query = searchQuery ? searchQuery.toLowerCase() : '';
+
+  // Filter the mock data based on name, city, state, or status
+  const filtered = propertyData.properties.filter(property =>
+    property.name.toLowerCase().includes(query) ||
+    property.location.city.toLowerCase().includes(query) ||
+    property.location.state.toLowerCase().includes(query) ||
+    property.status.toLowerCase().includes(query)
+  );
 
   setFilteredProperties(filtered);
 };
@@ -56,7 +60,7 @@ const handleFilter = (filters) => {
             <div className="plist-header">Property List</div>
             <div className='filter-panel'>
             <FilterPanel 
-              onSearch={handleFilter} // Pass the handleFilter function for Search
+              onSearch={handleSearch} // Pass the handleFilter function for Search
               onFilter={handleFilter} // Pass the handleFilter function for filters
               properties={filteredProperties} 
             />

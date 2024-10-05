@@ -22,15 +22,29 @@ function FilterCard({ onClose, properties, onFilter }) {
 
   // Extract unique locations from properties json data
   const uniqueLocations = Array.from(
-    new Set(properties.map((property) => property.location.state))
+    new Set(properties.map(property => property.location.state))
   );
 
   // Handles the Filtered properties
   const handleApplyFilters = () => {
     // Pass filter results to onFilter that will be rendered in table component
-    onFilter({ searchQuery: '', status, minPrice, maxPrice, location  });
+    onFilter({ status, minPrice, maxPrice, location });
 
-    // Close the filter card after applying filters
+    // Close the filter card
+    onClose();
+  };
+
+  // Clears all filters
+  const handleClearFilters = () => {
+    setStatus('');
+    setMinPrice('');
+    setMaxPrice('');
+    setLocation('');
+
+    // Call onFilter to reset the displayed properties
+    onFilter({ status: '', minPrice: '', maxPrice: '', location: '' });
+
+    // Close the filter card
     onClose();
   };
 
@@ -74,7 +88,7 @@ function FilterCard({ onClose, properties, onFilter }) {
                 value={location} 
                 onChange={(e) => setLocation(e.target.value)}
               >
-                <option value=''>Select Location</option>
+                <option value=''>All</option>
                 {uniqueLocations.map((city, index) => (
                   <option key={index} value={city.toLowerCase()}>
                     {city}
@@ -114,7 +128,7 @@ function FilterCard({ onClose, properties, onFilter }) {
           </div>
         </div>
         <div className='btn-filter'>
-          <button className='filter-btns' onClick={onClose}>Clear</button>
+          <button className='filter-btns' onClick={handleClearFilters}>Clear</button>
           <button className='filter-btns' onClick={handleApplyFilters}>Show Results</button>
         </div>
       </div>
