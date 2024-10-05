@@ -1,0 +1,97 @@
+
+.plist-container{
+    padding: 0 15px 15px 15px;
+}
+
+.plist-box{
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.plist-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.property-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.property-table thead th {
+    font-size: 12px;
+    background: none;
+    color: #64748B;
+    padding: 10px;
+    text-align: center;
+}
+
+.property-table tbody td {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 0.5px solid #E7EAEE;
+    border-bottom: 0.5px solid #E7EAEE;
+    text-align: center;
+}
+
+.property-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.property-table tbody td:last-child {
+    font-weight: bold;
+}
+
+.property-table {
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-buttons{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bx-show-alt, .bx-edit, .bx-trash{
+    font-size: 22px;
+}
+
+.bx-show-alt:hover, .bx-edit:hover, .bx-trash:hover{
+    color: #0E62FF;
+    cursor: pointer;
+}
+
+.property-img{
+    height: 60px;
+    width: 70px;
+    border-radius: 4px;
+}
+
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+
+.status-occupied {
+    color: red;
+    font-weight: bold;
+}
+
+
+@media (max-width: 425px){
+    .plist-table{
+        overflow: auto;
+    }
+
+    .property-table {
+        width: 800px;
+    }
+}

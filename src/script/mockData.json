@@ -1,0 +1,64 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "name": "Marquee Place Subdivision",
+        "description": "Lorem ipsum dolor sit amet. Ex perferendis natus quo perferendis illum ut quam Quis sit excepturi dolores. Rem reprehenderit soluta et alias voluptate id quidem quaerat est aspernatur autem qui possimus nihil et voluptatem galisum ut galisum alias.",
+        "location": {
+          "address": "123 Beach Ave, Miami, FL",
+          "city": "Pampanga",
+          "state": "Philippines",
+          "zip_code": "33101"
+        },
+        "type": "House",
+        "price": 2500000,
+        "status": "Available",
+        "features": {
+          "houserooms": 4,
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "size_sqft": 2200,
+          "garage": true,
+          "pool": true,
+          "year_built": 2010
+        },
+        "agent_id": 101,
+        "thumbnail": "/assets/marquee/house1.jpg",
+        "property_images": [
+                "/assets/marquee/house1.jpg",
+                "/assets/marquee/house2.jpg",
+                "/assets/marquee/house3.jpg"
+              ]
+      },
+      {
+        "id": 2,
+        "name": "The Vantage",
+        "description": "Lorem ipsum dolor sit amet. Ex perferendis natus quo perferendis illum ut quam Quis sit excepturi dolores. Rem reprehenderit soluta et alias voluptate id quidem quaerat est aspernatur autem qui possimus nihil et voluptatem galisum ut galisum alias.",
+        "location": {
+          "address": "123 Beach Ave, Miami, FL",
+          "city": "Mabalacat",
+          "state": "Australia",
+          "zip_code": "33101"
+        },
+        "type": "House",
+        "price": 2800000,
+        "status": "Occupied",
+        "features": {
+          "houserooms": 6,
+          "bedrooms": 2,
+          "bathrooms": 2,
+          "size_sqft": 2200,
+          "garage": true,
+          "pool": true,
+          "year_built": 2010
+        },
+        "agent_id": 101,
+        "thumbnail": "/assets/vantage/house4.jpg",
+        "property_images": [
+                "/assets/vantage/house4.jpg",
+                "/assets/vantage/house5.jpg",
+                "/assets/vantage/house6.jpg"
+              ]
+      }
+    ]
+}

@@ -1,0 +1,185 @@
+.filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.filter-header{
+    font-size: 26px;
+    text-align: start;
+}
+
+.filter-details{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-contents{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.filter-title{
+    font-size: 16px;
+    text-align: start;
+}
+
+.filter-options{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.filter-btn {
+    display: flex; 
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #000000; 
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover {
+    color: #fff;
+    background-color: #0E62FF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn.active {
+    background-color: #0E62FF;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn:focus {
+    outline: none; 
+}
+
+.filter-maximum{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-minimum{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown-wrapper {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+select {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #000000; 
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+select option {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.dropdown-wrapper select {
+    margin-bottom: 10px;
+}
+
+.dropdown-wrapper:last-child select {
+    margin-bottom: 0;
+}
+
+
+.btn-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.filter-btns {
+    background-color: #0E62FF; /* Customize as needed */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btns:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+  
+
+
+@media (max-width:425px){
+    .filter-content {
+        background: white;
+        width: 90%;
+    }
+
+    .filter-header {
+        font-size: 24px;
+    }
+
+    .filter-details {
+        margin-left: 0px;
+    }
+
+    .filter-title {
+        font-size: 14px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+    }
+
+    select {
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    select option {
+        font-size: 12px;
+    }
+}

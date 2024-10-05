@@ -1,0 +1,45 @@
+.menu-container{
+    width: 100%;
+}
+
+.menu-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-title{
+    font-size: 26px;
+}
+
+.menus{
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items{
+    font-size: 22px;
+    color: #84919A;
+}
+
+
+@media (max-width: 425px){ 
+    .menu-box{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    .menu-title{
+        font-size: 22px;
+    }
+
+    .menu-items{
+        font-size: 18px;
+    }
+
+    .menus {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,143 @@
+.analytics-container{
+    padding: 15px;
+}
+
+.analytics-box{
+    display: flex;
+    gap: 10px;
+}
+
+.analytics-box2{
+    gap: 10px;
+    width: 90%;
+    display: flex;
+}
+
+.grid-item{
+    border-radius: 6px;
+}
+
+.analytics, .property1{
+    padding: 15px;
+}
+
+.analytics, .property1{
+    background-color: #FFFFFF;
+}
+
+.analytics {
+    height: 250px;
+    width: 100%;
+}
+
+.analytics-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.property1 {
+    height: 250px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bx-building-house{
+    color: #0E62FF;
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+
+.property2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 250px;
+    width: 100%;
+}
+
+.properties-box{
+    padding: 0 10px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.occupied-icon{
+    color: #FF005E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.available-icon{
+    color: #1E9C39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.property-text{
+    font-size: 14px;
+}
+
+
+@media (max-width:1024px){
+    .analytics{
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    .analytics-box {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .analytics-box2 {
+        gap: 10px;
+        width: 100%;
+        display: flex;
+    }
+
+    .analytics{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px){ 
+    .analytics-box{
+        flex-direction: column;
+    }
+
+    .analytics-box2{
+        width: 100%;
+    }
+
+    .bx-building-house {
+        font-size: 60px;
+    }
+
+    .analytics-box2{
+        flex-direction: row;
+    }
+
+    .property1 {
+        height: 250px;
+    }
+
+    .property-text{
+        font-size: 12px;
+    }
+}
