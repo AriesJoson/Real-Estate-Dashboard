@@ -1,6 +1,6 @@
 import React from 'react'
-import '../css/analytics.css'
 import LineChartComponent from './chart'
+import '../css/analytics.css'
 
 function Analytics() {
   return (
