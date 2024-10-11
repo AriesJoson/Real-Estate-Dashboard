@@ -3,6 +3,7 @@ import '../css/table.css'
 import FilterPanel from './filter'
 import propertyData from '../script/mockData.json'
 import PropertyCard from './PropertyCard';
+import { filteredProperty } from '../utils/filteredProperties';
 
 function PropertyList() {
 
@@ -36,22 +37,16 @@ const handleFilter = (filters) => {
 
     return matchesStatus && matchesMinPrice && matchesMaxPrice && matchesLocation;
   });
+  
   setFilteredProperties(filtered);
 };
 
-// Hadles the search filter for the table
 const handleSearch = (searchQuery) => {
   const query = searchQuery ? searchQuery.toLowerCase() : '';
 
-  // Filter the mock data based on name, city, state, or status
-  const filtered = propertyData.properties.filter(property =>
-    property.name.toLowerCase().includes(query) ||
-    property.location.city.toLowerCase().includes(query) ||
-    property.location.state.toLowerCase().includes(query) ||
-    property.status.toLowerCase().includes(query)
-  );
+  const filterResults = filteredProperty(query, propertyData);
 
-  setFilteredProperties(filtered);
+  setFilteredProperties(filterResults);
 };
 
   return (
@@ -60,8 +55,8 @@ const handleSearch = (searchQuery) => {
             <div className="plist-header">Property List</div>
             <div className='filter-panel'>
             <FilterPanel 
-              onSearch={handleSearch} // Pass the handleFilter function for Search
-              onFilter={handleFilter} // Pass the handleFilter function for filters
+              onSearch={handleSearch}
+              onFilter={handleFilter}
               properties={filteredProperties} 
             />
             </div>

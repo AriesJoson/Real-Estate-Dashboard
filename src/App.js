@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className='main-body'>
         <div className='App'>
-          {/* Sidebar stays here globally */}
+          {/* Globall components */}
           <Sidebar />
           <Navbar />
 

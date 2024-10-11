@@ -46,7 +46,7 @@
 .card-images{
     gap: 10px;
     max-height: 80vh;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden; 
     display: flex;
     flex-direction: column;

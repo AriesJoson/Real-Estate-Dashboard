@@ -93,9 +93,11 @@
 }
 
 
-
-
-
+@media (max-width: 2560px){
+    .navbar{
+        display: none;
+    }
+}
 
 @media (max-width: 1440px){
     .navbar{

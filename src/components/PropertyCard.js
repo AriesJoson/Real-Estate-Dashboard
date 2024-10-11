@@ -21,7 +21,7 @@ function PropertyCard({ property, onClose }) {
                 </div>
                 <div className='card-location'> 
                     <i className='bx bxs-location-plus'></i>
-                    <p className='card-text'>{property.location.city}, {property.location.state}</p>
+                    <p className='card-text'>{property.location.address}, {property.location.city}, {property.location.state}</p>
                 </div>
                 <div className='card-status'> 
                     <p className={property.status === 'Available' ? 'card-available' : 'card-occupied'}>{property.status}</p>
