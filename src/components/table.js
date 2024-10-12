@@ -3,7 +3,8 @@ import '../css/table.css'
 import FilterPanel from './filter'
 import propertyData from '../script/mockData.json'
 import PropertyCard from './PropertyCard';
-import { filteredProperty } from '../utils/filteredProperties';
+import { filteredProperty } from '../utils/filteredSearch';
+import { filteredOptions } from '../utils/filteredOptions';
 
 function PropertyList() {
 
@@ -27,18 +28,10 @@ const handleClosePopup = () => {
 
 // Hadles all the filter from filter component and rendered it in the table
 const handleFilter = (filters) => {
-  const { status, minPrice, maxPrice, location } = filters;
   
-  const filtered = propertyData.properties.filter(property => {
-    const matchesStatus = status ? property.status === status : true;
-    const matchesMinPrice = minPrice ? property.price >= minPrice : true;
-    const matchesMaxPrice = maxPrice ? property.price <= maxPrice : true;
-    const matchesLocation = location ? property.location.state.toLowerCase() === location : true;
+  const filterHandler = filteredOptions(filters, propertyData);
 
-    return matchesStatus && matchesMinPrice && matchesMaxPrice && matchesLocation;
-  });
-  
-  setFilteredProperties(filtered);
+  setFilteredProperties(filterHandler);
 };
 
 const handleSearch = (searchQuery) => {
